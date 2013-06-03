@@ -19,6 +19,12 @@
     <Filter Include="ヘッダー ファイル\server">
       <UniqueIdentifier>{2e1afedd-8a88-4c79-8359-df654c56aca4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\client">
+      <UniqueIdentifier>{492dbf07-436d-443c-91e0-86bb63284123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\client">
+      <UniqueIdentifier>{11ca1ad9-b475-4ce7-8bb9-47802098eeda}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -33,6 +39,12 @@
     <ClCompile Include="server\Server.cpp">
       <Filter>ソース ファイル\server</Filter>
     </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="AntTweakBar\AntTweakBar.lib">
@@ -45,6 +57,15 @@
     </ClInclude>
     <ClInclude Include="server\Server.h">
       <Filter>ヘッダー ファイル\server</Filter>
+    </ClInclude>
+    <ClInclude Include="client\directx_dummy.h">
+      <Filter>ソース ファイル\client</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

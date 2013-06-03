@@ -74,16 +74,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="comment.cpp" />
+    <ClCompile Include="debug.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="export_func.cpp" />
     <ClCompile Include="server\Server.cpp" />
+    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="AntTweakBar\AntTweakBar.lib" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="client\directx_dummy.h" />
     <ClInclude Include="const.h" />
+    <ClInclude Include="debug.h" />
     <ClInclude Include="server\Server.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="th125.def" />
