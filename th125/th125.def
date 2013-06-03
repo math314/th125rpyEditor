@@ -1,0 +1,5 @@
+LIBRARY th125_old
+EXPORTS
+
+	InitServer			@1
+	InitClient			@2

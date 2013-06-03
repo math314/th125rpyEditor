@@ -1,0 +1,25 @@
+LIBRARY th125_old
+EXPORTS
+
+;	dllinjection.h
+
+	DllInjectionA				@1
+	DllInjectionW				@2
+	CreateProcessAndInjectDllW	@3
+	CreateProcessAndInjectDllA	@4
+	CreateSuspendedProcessW		@5
+	CreateSuspendedProcessA		@6
+	ResumeProcess				@7
+	CloseProcess				@8
+	ExecuteRemoteProcess		@9
+
+;	init.h
+
+	LoadInitData				@10
+	SaveInitData				@11
+	GetInitData					@12
+	SetInitData					@13
+
+;	injectMyself.h
+
+	InjectMyself				@14

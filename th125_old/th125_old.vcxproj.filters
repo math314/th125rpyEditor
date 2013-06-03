@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\AntTweakBar">
+      <UniqueIdentifier>{0688792d-a4be-429c-b80f-4584d27c00f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\DirectX9">
+      <UniqueIdentifier>{c3201575-2cde-4079-986a-77baef7cb2be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\DirectX9">
+      <UniqueIdentifier>{9c619cdc-c709-4254-81bf-1e2ac37af085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\dllInjection">
+      <UniqueIdentifier>{a6969acb-d78a-409f-b9d8-10578c6a56e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\dllinjection">
+      <UniqueIdentifier>{da8c12c1-b4a5-4c7a-8a52-7c431950a024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\injectionCodes">
+      <UniqueIdentifier>{7ee28fff-065d-4dce-8467-6cae00776e7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\injectionCodes">
+      <UniqueIdentifier>{762ccafd-b97d-4c2d-8bf7-3337791be8ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DebugFile.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="init.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="injectMyself.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX9\DrawScreen.cpp">
+      <Filter>ソース ファイル\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX9\MyDirectX.cpp">
+      <Filter>ソース ファイル\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="dllInjection\dllinjection.cpp">
+      <Filter>ソース ファイル\dllinjection</Filter>
+    </ClCompile>
+    <ClCompile Include="injectionCodes\injectionCodes.cpp">
+      <Filter>ソース ファイル\injectionCodes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DebugFile.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="init.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="AntTweakBar\global.h">
+      <Filter>ヘッダー ファイル\AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX9\MyDirectX.h">
+      <Filter>ヘッダー ファイル\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX9\d3d9_dummy.h">
+      <Filter>ヘッダー ファイル\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX9\DrawScreen.h">
+      <Filter>ヘッダー ファイル\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="dllInjection\dllinjection.h">
+      <Filter>ヘッダー ファイル\dllInjection</Filter>
+    </ClInclude>
+    <ClInclude Include="injectionCodes\injectionCodes.h">
+      <Filter>ヘッダー ファイル\injectionCodes</Filter>
+    </ClInclude>
+    <ClInclude Include="injectMyself.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="th125rpyEditor.def">
+      <Filter>リソース ファイル</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="AntTweakBar\AntTweakBar.lib">
+      <Filter>リソース ファイル</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
