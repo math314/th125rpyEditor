@@ -1,7 +1,7 @@
 #pragma once
 
 /*
- * Dummy_Device9 , Dummy_Direct3D9 , Dummy_DirectInputDevice8 , Dummy_DirectInput8 , Dummy_DirectSound8
+ * Dummy_D3DDevice9 , Dummy_Direct3D9 , Dummy_DirectInputDevice8 , Dummy_DirectInput8 , Dummy_DirectSound8
  * を継承すると、全メソッドを書かなくて良くて楽。
  */
 
@@ -11,7 +11,6 @@
 #define DIRECTINPUT_VERSION 0x0800
 #include <dinput.h>
 #include <dsound.h>
-#include <imagehlp.h>
 
 #pragma comment(lib,"d3d9.lib")
 #pragma comment(lib,"dinput8.lib")
@@ -26,20 +25,20 @@
 #endif
 
 //IDirect3DDevice9のダミー作成
-class Dummy_Device9 : public IDirect3DDevice9 {
+class Dummy_D3DDevice9 : public IDirect3DDevice9 {
 protected:
 
 	IDirect3DDevice9*  Device9;
 	HWND hWnd;
 
 public:
-	Dummy_Device9(IDirect3DDevice9* dev,HWND hWnd)
+	Dummy_D3DDevice9(IDirect3DDevice9* dev,HWND hWnd)
 	{
 		Device9 = dev;
 		hWnd = hWnd;
 	}
 
-	~Dummy_Device9()
+	~Dummy_D3DDevice9()
 	{
 		SAFE_DELETE(Device9);
 	}

@@ -58,14 +58,20 @@
     <ClInclude Include="server\Server.h">
       <Filter>ヘッダー ファイル\server</Filter>
     </ClInclude>
-    <ClInclude Include="client\directx_dummy.h">
-      <Filter>ソース ファイル\client</Filter>
-    </ClInclude>
     <ClInclude Include="debug.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="util.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="client\directx_dummy.h">
+      <Filter>ヘッダー ファイル\client</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>ヘッダー ファイル\client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\HookD3DDevice9.h">
+      <Filter>ヘッダー ファイル\client</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

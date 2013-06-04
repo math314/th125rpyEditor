@@ -7,7 +7,6 @@
 
 void DebugINT3(){ __asm{int 3} }
 
-
 void DebugStr(const char *_format, ...){
 	va_list arg;
 

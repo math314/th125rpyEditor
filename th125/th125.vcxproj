@@ -85,8 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client\directx_dummy.h" />
+    <ClInclude Include="client\HookD3DDevice9.h" />
     <ClInclude Include="const.h" />
     <ClInclude Include="debug.h" />
+    <ClInclude Include="global.h" />
     <ClInclude Include="server\Server.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
