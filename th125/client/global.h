@@ -7,4 +7,10 @@
 #include <dinput.h>
 #include <dsound.h>
 
-IDirect3DDevice9 *g_D3DDev;
+#ifdef GLOBAL
+#	define EXTERN
+#else
+#	define EXTERN extern
+#endif
+
+EXTERN IDirect3DDevice9 *g_D3DDev;

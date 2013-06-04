@@ -1,6 +1,6 @@
 #include "directx_hook.h"
 #include "global.h"
-#include "../AntTweakBar/AntTweakBar.h"
+#include "add_AntTweakBar.h"
 
 HookDirect3D9::HookDirect3D9(IDirect3D9* direct3D)
 	: Dummy_Direct3D9(direct3D)
@@ -20,16 +20,12 @@ HRESULT HookDirect3D9::CreateDevice(THIS_ UINT Adapter,D3DDEVTYPE DeviceType,HWN
 	//D3Dをグローバルに
 	g_D3DDev = *ppReturnedDeviceInterface;
 
-	//AntTweakBarを初期化
-	TwInit(TW_DIRECT3D9, g_D3DDev);
-
-	TwWindowSize(640,480);
-
 	if (SUCCEEDED(res)) {
 		//D3DDevice9のフック
 		*ppReturnedDeviceInterface = new HookD3DDevice9(*ppReturnedDeviceInterface,hFocusWindow);
 	}
 
+	add_AntTweakBar();
 
 	return res;
 }

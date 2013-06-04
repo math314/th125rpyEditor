@@ -57,6 +57,12 @@
     <ClCompile Include="client\hook_window.cpp">
       <Filter>ソース ファイル\client</Filter>
     </ClCompile>
+    <ClCompile Include="client\add_AntTweakBar.cpp">
+      <Filter>ソース ファイル\client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\global.cpp">
+      <Filter>ソース ファイル\client</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="AntTweakBar\AntTweakBar.lib">
@@ -86,6 +92,9 @@
       <Filter>ヘッダー ファイル\AntTweakBar</Filter>
     </ClInclude>
     <ClInclude Include="client\hook.h">
+      <Filter>ヘッダー ファイル\client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\add_AntTweakBar.h">
       <Filter>ヘッダー ファイル\client</Filter>
     </ClInclude>
   </ItemGroup>
