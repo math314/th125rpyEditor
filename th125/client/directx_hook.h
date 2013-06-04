@@ -2,8 +2,6 @@
 
 #include "directx_dummy.h"
 
-void hook_dx_funcs();
-
 class HookD3DDevice9 : public Dummy_D3DDevice9
 {
 

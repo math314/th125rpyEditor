@@ -1,8 +1,10 @@
 #include "directx_hook.h"
+#include "hook.h"
+#include "..\debug.h"
+
 #include <imagehlp.h>
 #pragma comment(lib,"imagehlp.lib")
 
-#include "..\debug.h"
 
 //IAT‚ğ’u‚«Š·‚¦‚Ü‚·B
 void replaceIAT(char *szModule,char *szImportName,void *DummyFunc)

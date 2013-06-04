@@ -76,6 +76,7 @@
     <ClCompile Include="client\HookD3DDevice9.cpp" />
     <ClCompile Include="client\HookDirect3D9.cpp" />
     <ClCompile Include="client\hook_dx_funcs.cpp" />
+    <ClCompile Include="client\hook_window.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="export_func.cpp" />
@@ -86,10 +87,11 @@
     <Library Include="AntTweakBar\AntTweakBar.lib" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AntTweakBar\AntTweakBar.h" />
     <ClInclude Include="client\directx_dummy.h" />
     <ClInclude Include="client\directx_hook.h" />
     <ClInclude Include="client\global.h" />
-    <ClInclude Include="const.h" />
+    <ClInclude Include="client\hook.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="server\Server.h" />
     <ClInclude Include="util.h" />

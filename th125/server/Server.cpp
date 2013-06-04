@@ -1,5 +1,5 @@
-#include "../const.h"
 #include "Server.h"
+#include "../debug.h"
 
 #include <Windows.h>
 #include <tchar.h>
@@ -7,6 +7,8 @@
 #include <cassert>
 
 using namespace std;
+
+const char MY_DLL_NAME[] = "th125.dll";
 
 static void getDirectoryNameByFileName(char *szDest,	//出力先
 								const char *szFileName)	//ファイル名
@@ -48,6 +50,8 @@ HANDLE DllInjection(PROCESS_INFORMATION *pi,	//プロセスの情報
 								   const char *szDllName)//Dllファイル名
 {
 
+	DebugStr("%s load.",szDllName);
+
 	HANDLE hProcess = pi->hProcess;
 
 	//dllファイルの絶対パスを保存する変数
@@ -73,13 +77,13 @@ HANDLE DllInjection(PROCESS_INFORMATION *pi,	//プロセスの情報
 	LPSTR RemoteProcessMemory;
 	RemoteProcessMemory = (LPSTR)VirtualAllocEx( hProcess, NULL, szLibFileLen, MEM_COMMIT, PAGE_READWRITE);
 	if(RemoteProcessMemory == NULL){
-		//MessageBox(NULL,"プロセス内にメモリが確保できませんでした。","",0);
+		DebugStr("プロセス内にメモリが確保できませんでした");
 		return NULL;  
 	}
 
 	//書き込み
 	if(WriteProcessMemory(hProcess, RemoteProcessMemory, (PVOID)szLibFile, szLibFileLen, NULL) == 0){
-		//MessageBox(NULL,"プロセスに書き込みができませんでした。","",0);
+		DebugStr("プロセスに書き込みができませんでした");
 		return NULL;
 	}
 
@@ -87,7 +91,7 @@ HANDLE DllInjection(PROCESS_INFORMATION *pi,	//プロセスの情報
 	PTHREAD_START_ROUTINE pfnThreadRtn; 
 	pfnThreadRtn = (PTHREAD_START_ROUTINE)GetProcAddress( GetModuleHandle(_TEXT("Kernel32")), "LoadLibraryA");
 	if (pfnThreadRtn == NULL){
-		//MessageBox(NULL,"LoadLibraryが見つかりませんでした。","",0);
+		DebugStr("LoadLibraryが見つかりませんでした");
 		return NULL;  
 	}
 
@@ -95,7 +99,7 @@ HANDLE DllInjection(PROCESS_INFORMATION *pi,	//プロセスの情報
 	HANDLE hThread;
 	hThread = CreateRemoteThread(hProcess, NULL, 0, pfnThreadRtn, RemoteProcessMemory,CREATE_SUSPENDED, NULL);
 	if (hThread == NULL){
-		MessageBox(NULL,"スレッドが作れませんでした。","",0);
+		DebugStr("スレッドが作れませんでした");
 		return NULL;
 	}
 
@@ -202,7 +206,17 @@ bool RemoteClientInitializer::CreateClientProcess(){
 bool RemoteClientInitializer::Injection(){
 	assert(m_pi != NULL);
 
+	string ATB_path = m_DllPath + "\\..\\AntTweakBar.dll";
+	//AntTweakBarの読み込み
+	HANDLE hBar = DllInjection(m_pi, ATB_path.c_str());
+	if(hBar == NULL){
+		DebugStr("%s is not found.",ATB_path.c_str());
+		return false;
+	}
+
+	//th125.dllの読み込み
 	m_RemoteDllPointer = DllInjection(m_pi,m_DllPath.c_str());
+
 	return m_RemoteDllPointer != NULL;
 
 }

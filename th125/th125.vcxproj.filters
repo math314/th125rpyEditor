@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="リソース ファイル">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -16,14 +12,21 @@
     <Filter Include="ソース ファイル\server">
       <UniqueIdentifier>{0e75a3c0-a3ab-4d22-91be-315e1cdda61d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\client">
+      <UniqueIdentifier>{11ca1ad9-b475-4ce7-8bb9-47802098eeda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
     <Filter Include="ヘッダー ファイル\server">
       <UniqueIdentifier>{2e1afedd-8a88-4c79-8359-df654c56aca4}</UniqueIdentifier>
     </Filter>
     <Filter Include="ヘッダー ファイル\client">
       <UniqueIdentifier>{492dbf07-436d-443c-91e0-86bb63284123}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\client">
-      <UniqueIdentifier>{11ca1ad9-b475-4ce7-8bb9-47802098eeda}</UniqueIdentifier>
+    <Filter Include="ヘッダー ファイル\AntTweakBar">
+      <UniqueIdentifier>{b40b0988-0f77-46c4-88cf-eb1b18678e9c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +54,9 @@
     <ClCompile Include="client\hook_dx_funcs.cpp">
       <Filter>ソース ファイル\client</Filter>
     </ClCompile>
+    <ClCompile Include="client\hook_window.cpp">
+      <Filter>ソース ファイル\client</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="AntTweakBar\AntTweakBar.lib">
@@ -58,9 +64,6 @@
     </Library>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="const.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="server\Server.h">
       <Filter>ヘッダー ファイル\server</Filter>
     </ClInclude>
@@ -77,6 +80,12 @@
       <Filter>ヘッダー ファイル\client</Filter>
     </ClInclude>
     <ClInclude Include="client\directx_hook.h">
+      <Filter>ヘッダー ファイル\client</Filter>
+    </ClInclude>
+    <ClInclude Include="AntTweakBar\AntTweakBar.h">
+      <Filter>ヘッダー ファイル\AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="client\hook.h">
       <Filter>ヘッダー ファイル\client</Filter>
     </ClInclude>
   </ItemGroup>
