@@ -73,7 +73,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="comment.cpp" />
+    <ClCompile Include="client\HookD3DDevice9.cpp" />
+    <ClCompile Include="client\HookDirect3D9.cpp" />
+    <ClCompile Include="client\hook_dx_funcs.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="export_func.cpp" />
@@ -85,10 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client\directx_dummy.h" />
-    <ClInclude Include="client\HookD3DDevice9.h" />
+    <ClInclude Include="client\directx_hook.h" />
+    <ClInclude Include="client\global.h" />
     <ClInclude Include="const.h" />
     <ClInclude Include="debug.h" />
-    <ClInclude Include="global.h" />
     <ClInclude Include="server\Server.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>

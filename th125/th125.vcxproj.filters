@@ -30,9 +30,6 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="comment.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="export_func.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -44,6 +41,15 @@
     </ClCompile>
     <ClCompile Include="util.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="client\HookD3DDevice9.cpp">
+      <Filter>ソース ファイル\client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\HookDirect3D9.cpp">
+      <Filter>ソース ファイル\client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\hook_dx_funcs.cpp">
+      <Filter>ソース ファイル\client</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -67,10 +73,10 @@
     <ClInclude Include="client\directx_dummy.h">
       <Filter>ヘッダー ファイル\client</Filter>
     </ClInclude>
-    <ClInclude Include="global.h">
+    <ClInclude Include="client\global.h">
       <Filter>ヘッダー ファイル\client</Filter>
     </ClInclude>
-    <ClInclude Include="client\HookD3DDevice9.h">
+    <ClInclude Include="client\directx_hook.h">
       <Filter>ヘッダー ファイル\client</Filter>
     </ClInclude>
   </ItemGroup>

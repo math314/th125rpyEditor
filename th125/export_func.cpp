@@ -1,4 +1,5 @@
 #include "server\Server.h"
+#include "client\directx_hook.h"
 #include <cassert>
 #include <memory>
 
@@ -33,6 +34,9 @@ bool __stdcall InitServer(const char* dll_path,const char *target_path){
 int __stdcall InitClient(void *dummy){
 
 	MessageBox(NULL,"succeed!","rpyEditor(client)",0);
+
+	//directX関係のメソッドを置き換える
+	hook_dx_funcs();
 
 	return 0;
 }
