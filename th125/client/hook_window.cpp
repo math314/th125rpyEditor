@@ -8,8 +8,8 @@ const HWND *pMAIN_WND = (HWND *)0x004D17D8;
 static WNDPROC oldWndProc = NULL;
 HRESULT CALLBACK HookWindowProc(HWND hWnd,UINT msg,WPARAM wParam,LPARAM lParam){
 	
-	//AntTweakBarは、ウィンドウのサイズとdirectXのBackBufferサイズが違う場合に対応していない
-	//ので、此方側で対応する。
+	//AntTweakBarは、ウィンドウのサイズとdirectXのBackBufferサイズが違う場合に
+	//対応していないので、此方側で対応する。
 	if(msg == WM_MOUSEMOVE){
 		RECT rc;
 		GetClientRect(hWnd,&rc);
