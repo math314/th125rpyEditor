@@ -1,9 +1,11 @@
 #include "directx_hook.h"
 #include "../AntTweakBar/AntTweakBar.h"
+#include "hook.h"
 
 HookD3DDevice9::HookD3DDevice9(IDirect3DDevice9* dev,HWND hWnd)
 	: Dummy_D3DDevice9(dev,hWnd)
 {
+	hook_window();
 }
 
 HookD3DDevice9::~HookD3DDevice9()

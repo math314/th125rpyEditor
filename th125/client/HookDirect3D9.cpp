@@ -23,6 +23,8 @@ HRESULT HookDirect3D9::CreateDevice(THIS_ UINT Adapter,D3DDEVTYPE DeviceType,HWN
 	//AntTweakBar‚ğ‰Šú‰»
 	TwInit(TW_DIRECT3D9, g_D3DDev);
 
+	TwWindowSize(640,480);
+
 	if (SUCCEEDED(res)) {
 		//D3DDevice9‚ÌƒtƒbƒN
 		*ppReturnedDeviceInterface = new HookD3DDevice9(*ppReturnedDeviceInterface,hFocusWindow);

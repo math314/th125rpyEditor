@@ -37,9 +37,10 @@ int __stdcall InitClient(void *dummy){
 
 	//directX関係のメソッドを置き換える
 	hook_dx_funcs();
+	
+	//このタイミングではwindowは作成されていないので、DirectX初期化時にhookする.
+	//hook_window();
 
-	//main windowをhook
-	hook_window();
 
 	return 0;
 }
