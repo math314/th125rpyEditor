@@ -1,4 +1,4 @@
-LIBRARY th125_old
+LIBRARY th125
 EXPORTS
 
 	InitServer			@1
